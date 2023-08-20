@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Se kunder</label>
+<br>
+<h2>Opret kunde</h2>
+<div>
+    <form action="http://localhost:8080/book" method="post" id="formBook">
+        <div>
+            <label for="inpTitle">Titel</label>
+            <br>
+            <input
+                    type="text"
+                    name="title"
+                    class="inputfield"
+                    placeholder="eks. To Kill a Mockingbird"
+                    required
+                    id="inpTitle"> <!--name bruger vi i js, skal hedde det samme som i db-->
+            <br>
+        </div>
+        <br>
+        <select id="ddSelectAuthor">
+            <option value="" selected="data-default" disabled="true">Forfattere</option>
+        </select>
+        <br><br>
+        <select id="ddSelectPublisher">
+            <option value="" selected="data-default" disabled="true">Forlag</option>
+        </select>
+        <br><br>
+        <button type="submit" title="Gem" id="submit">Opret</button>
+    </form>
+</div>
+<br><br>
+<table class="table" id="tblBook">
+    <tr>
+        <th>Id</th>
+        <th>Titel</th>
+        <th>Forfatter</th>
+        <th>Forlag</th>
+    </tr>
+</table>
+
+
+<script src="../js/fetchAuthor.js"></script>
+<script src="../js/fetchPublisher.js"></script>
+<script src="../js/fetchBook.js"></script>
+<script src="../js/formBook.js"></script>
+
+</body>
+</html>
